@@ -7,29 +7,37 @@ use ArrayObject;
 use cls\types\array_operations\TPreDefinedArrayOperations;
 
 // https://stackoverflow.com/questions/29319031/extending-arrayobject-why-does-get-object-vars-return-an-empty-array
-class ArrayType extends ArrayObject
+class ArrayType
 {
+  use TPreDefinedArrayOperations;
 
-  public function __construct($input = array(), $flags = 0, $iterator_class = 'ArrayIterator')
-  {
-    parent::__construct($input, $flags, $iterator_class);
-//    print_r(get_object_vars($this));
-  }
-
-//  use TPreDefinedArrayOperations;
+  public const STD_PROP_LIST = 1 ;
+  public const ARRAY_AS_PROPS = 2 ;
 
   /**
+   * TODO
+   * Array mit optional fester Länge
+   */
+  public const FIXED = 4 ;
+
+  /**
+   * TODO : FixedArray Klasse einplanen und testen
+   * https://www.php.net/manual/de/class.splfixedarray.php
+   *
    * @var ArrayObject
    */
-//  private $arr_obj;
+  protected $arr_obj;
 
   /**
    * ArrayType constructor.
-   * @param array $arr_obj
+   * @param array $input
+   * @param int $flags
+   * @param string $iterator_class
    */
-//  public function __construct( array $arr_obj = [] )
-//  {
-//    $this -> arr_obj = new ArrayObject( $arr_obj );
-//  }
+  public function __construct($input = [], $flags = 0, $iterator_class = 'ArrayIterator')
+  {
+    $this->arr_obj = new ArrayObject($input, $flags, $iterator_class);
+  }
+
 
 }

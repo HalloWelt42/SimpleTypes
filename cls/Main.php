@@ -8,9 +8,9 @@
 
 namespace cls;
 
-use ArrayObject;
 use cls\types\ArrayType;
-use cls\types\StringType;
+use ReflectionClass;
+use ReflectionException;
 
 /**
  * Class Main
@@ -25,9 +25,12 @@ class Main
   public function __construct()
   {
 
-    print_r(
-        (new ArrayType([1,2,3]))
-    );
+   $a = new ArrayType(
+       [6,2,5]
+   );
+
+
+   print_r($a ->asort());
 
   }
 
