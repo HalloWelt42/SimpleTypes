@@ -1,2 +1,2 @@
 # SimpleTypes
-Einfache Datentypen in OOP
+Einfache Datentypen objekorientiert abgebildet.

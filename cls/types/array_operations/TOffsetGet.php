@@ -3,41 +3,39 @@
 
 namespace cls\types\array_operations;
 
-
 use ArrayObject;
 
 /**
- * Trait TOffsetExists
+ * Trait TOffsetGet
  * @package cls\types\array_operations
  */
-trait TOffsetExists
+trait TOffsetGet
 {
 
   /**
    * @param int $i
-   * @return bool
+   * @return mixed
    */
-  public function offset_exists_index(int $i): bool
+  public function offset_get_index(int $i)
   {
     /**
      * @var $obj ArrayObject
      */
     $obj = $this->arr_obj;
-    return $obj->offsetExists($i);
+    return $obj->offsetGet($i);
   }
-
 
   /**
    * @param string $key
-   * @return bool
+   * @return mixed
    */
-  public function offset_exists_assoc(string $key): bool
+  public function offset_get_assoc(string $key)
   {
     /**
      * @var $obj ArrayObject
      */
     $obj = $this->arr_obj;
-    return $obj->offsetExists($key);
+    return $obj->offsetGet($key);
   }
 
 }

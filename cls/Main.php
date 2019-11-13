@@ -9,6 +9,7 @@
 namespace cls;
 
 use cls\types\ArrayType;
+use cls\types\StringType;
 use ReflectionClass;
 use ReflectionException;
 
@@ -25,12 +26,12 @@ class Main
   public function __construct()
   {
 
-   $a = new ArrayType(
-       [6,2,5]
-   );
+    $a = (new ArrayType([0,1,2,3]))
+        ->offset_set_key('ok', 'ACB')
+    ->offset_unset_assoc(0);
 
+    print_r($a->count().PHP_EOL );
 
-   print_r($a ->asort());
 
   }
 

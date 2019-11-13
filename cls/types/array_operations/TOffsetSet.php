@@ -7,37 +7,35 @@ namespace cls\types\array_operations;
 use ArrayObject;
 
 /**
- * Trait TOffsetExists
+ * Trait TOffsetSet
  * @package cls\types\array_operations
  */
-trait TOffsetExists
+trait TOffsetSet
 {
 
   /**
    * @param int $i
-   * @return bool
+   * @param $val
+   * @return TOffsetSet
    */
-  public function offset_exists_index(int $i): bool
+  public function offset_set_index(int $i, $val): self
   {
     /**
      * @var $obj ArrayObject
      */
     $obj = $this->arr_obj;
-    return $obj->offsetExists($i);
+    $obj->offsetSet($i, $val);
+    return $this;
   }
 
-
-  /**
-   * @param string $key
-   * @return bool
-   */
-  public function offset_exists_assoc(string $key): bool
+  public function offset_set_key(string $key, $val): self
   {
     /**
      * @var $obj ArrayObject
      */
     $obj = $this->arr_obj;
-    return $obj->offsetExists($key);
+    $obj->offsetSet($key, $val);
+    return $this;
   }
 
 }
