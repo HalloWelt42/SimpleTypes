@@ -6,6 +6,10 @@ namespace cls\types\array_operations;
 use ArrayObject;
 use cls\types\StringType;
 
+/**
+ * Trait TImplode
+ * @package cls\types\array_operations
+ */
 trait TImplode
 {
 

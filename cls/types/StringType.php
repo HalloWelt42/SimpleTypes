@@ -9,8 +9,9 @@
 namespace cls\types;
 
 use cls\types\string_operations\TPreDefinedStringOperations;
+use JsonSerializable;
 
-class StringType
+class StringType implements JsonSerializable
 {
     use TPreDefinedStringOperations;
 
@@ -66,4 +67,15 @@ class StringType
       return $this -> str;
     }
 
+  /**
+   * Specify data which should be serialized to JSON
+   * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
+   * @return mixed data which can be serialized by <b>json_encode</b>,
+   * which is a value of any type other than a resource.
+   * @since 5.4.0
+   */
+  public function jsonSerialize()
+  {
+    return $this->str;
+  }
 }
