@@ -26,12 +26,14 @@ class Main
   public function __construct()
   {
 
-    $a = (new ArrayType([0, 1, 2, 3]))
-        ->offset_set_key('ok', 'ACB')
-        ->offset_unset_assoc(0);
+    $a = new ArrayType(
+        ['obj'=>9, 1, 2, 3],ArrayType::ARRAY_AS_PROPS
+    );
 
-    print_r($a->count() . PHP_EOL);
+    print_r(
 
+    $a
+    );
 
   }
 
