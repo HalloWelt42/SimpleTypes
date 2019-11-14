@@ -12,6 +12,20 @@ use ArrayObject;
 trait TOffsetGet
 {
 
+
+  /**
+   * @param string|int $i
+   * @return mixed
+   */
+  public function offset_get_mixed(string $i)
+  {
+    /**
+     * @var $obj ArrayObject
+     */
+    $obj = $this->arr_obj;
+    return $obj->offsetGet($i);
+  }
+
   /**
    * @param int $i
    * @return mixed

@@ -14,6 +14,21 @@ trait TOffsetSet
 {
 
   /**
+   * @param $i
+   * @param $val
+   * @return $this
+   */
+  public function offset_set_mixed( $i, $val): self
+  {
+    /**
+     * @var $obj ArrayObject
+     */
+    $obj = $this->arr_obj;
+    $obj->offsetSet($i, $val);
+    return $this;
+  }
+
+  /**
    * @param int $i
    * @param $val
    * @return TOffsetSet
