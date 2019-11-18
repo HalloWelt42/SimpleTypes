@@ -3,7 +3,10 @@
 
 namespace cls\types\string_operations;
 
-
+/**
+ * Trait THtmlEntityDecode
+ * @package cls\types\string_operations
+ */
 trait THtmlEntityDecode
 {
 

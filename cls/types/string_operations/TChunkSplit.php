@@ -6,6 +6,10 @@ namespace cls\types\string_operations;
 
 use cls\types\StringType;
 
+/**
+ * Trait TChunkSplit
+ * @package cls\types\string_operations
+ */
 trait TChunkSplit
 {
 

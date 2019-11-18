@@ -45,4 +45,5 @@ class IntType extends Number
     $this->value = $value;
   }
 
+
 }

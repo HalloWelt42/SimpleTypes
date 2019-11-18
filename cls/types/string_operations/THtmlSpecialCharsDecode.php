@@ -3,7 +3,10 @@
 
 namespace cls\types\string_operations;
 
-
+/**
+ * Trait THtmlSpecialCharsDecode
+ * @package cls\types\string_operations
+ */
 trait THtmlSpecialCharsDecode
 {
 

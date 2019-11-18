@@ -8,12 +8,14 @@
 
 namespace cls\types;
 use Exception;
+use JsonSerializable;
+use RuntimeException;
 
 /**
  * Class Number
  * @package cls\types
  */
-abstract class Number
+abstract class Number implements JsonSerializable
 {
 
   /**
@@ -96,7 +98,7 @@ abstract class Number
    */
   protected function chk_max( $value ) : void {
     if( $value > $this -> max ){
-      throw new Exception( "{$this -> class_name} > {$this -> max}" );
+      throw new RuntimeException( "{$this -> class_name} > {$this -> max}" );
     }
   }
 
@@ -106,7 +108,7 @@ abstract class Number
    */
   protected function chk_min( $value ) : void {
     if ( $value < $this -> min ){
-      throw  new Exception( "{$this -> class_name} < {$this -> min}");
+      throw  new RuntimeException( "{$this -> class_name} < {$this -> min}");
     }
   }
 
@@ -132,6 +134,18 @@ abstract class Number
   public function __toString() : string
   {
     return $this -> value . '';
+  }
+
+  /**
+   * Specify data which should be serialized to JSON
+   * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
+   * @return mixed data which can be serialized by <b>json_encode</b>,
+   * which is a value of any type other than a resource.
+   * @since 5.4.0
+   */
+  public function jsonSerialize()
+  {
+    return $this->value;
   }
 
 }

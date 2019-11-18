@@ -5,6 +5,10 @@ namespace cls\types\string_operations;
 
 use ArrayObject;
 
+/**
+ * Trait TCountChars
+ * @package cls\types\string_operations
+ */
 trait TCountChars
 {
 
