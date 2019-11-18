@@ -3,7 +3,10 @@
 
 namespace cls\types\string_operations;
 
-
+/**
+ * Trait THex2Bin
+ * @package cls\types\string_operations
+ */
 trait THex2Bin
 {
 

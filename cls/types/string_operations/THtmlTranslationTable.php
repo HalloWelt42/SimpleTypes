@@ -5,6 +5,10 @@ namespace cls\types\string_operations;
 
 use ArrayObject;
 
+/**
+ * Trait THtmlTranslationTable
+ * @package cls\types\string_operations
+ */
 trait THtmlTranslationTable
 {
 

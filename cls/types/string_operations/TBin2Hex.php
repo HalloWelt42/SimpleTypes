@@ -10,6 +10,10 @@ namespace cls\types\string_operations;
 
 use cls\types\UByte;
 
+/**
+ * Trait TBin2Hex
+ * @package cls\types\string_operations
+ */
 trait TBin2Hex
 {
 

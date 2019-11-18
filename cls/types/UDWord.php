@@ -4,7 +4,9 @@
 namespace cls\types;
 
 
-use mysql_xdevapi\Exception;
+
+use Exception;
+use RuntimeException;
 
 /**
  * Class UDWord
@@ -25,14 +27,14 @@ class UDWord extends Number
     $this -> byte_length = 4;
 
     if( PHP_INT_MAX === 2147483647 ){
-      throw new Exception;
+      throw new RuntimeException;
     }
     parent::__construct($value);
   }
 
   /**
    * @param int $value
-   * @throws \Exception
+   * @throws Exception
    */
   protected function restrictions( int $value ) : void {
 

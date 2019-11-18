@@ -12,18 +12,24 @@ use cls\types\StringType;
 trait TControlCharacter
 {
   /**
+   * @param int $times
    * @return $this
    */
-  public function nl() : self {
-    $this->str .=  PHP_EOL;
+  public function nl($times = 1): self
+  {
+    $this->str .= str_repeat(PHP_EOL, $times);
     return $this;
   }
 
-  public function tab() : self {
-    $this->str .= "\t";
+  /**
+   * @param int $times
+   * @return $this
+   */
+  public function tab($times = 1): self
+  {
+    $this->str .= str_repeat("\t", $times);
     return $this;
   }
-
 
 
 }

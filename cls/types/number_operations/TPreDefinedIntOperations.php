@@ -8,6 +8,10 @@
 
 namespace cls\types\number_operations;
 
+/**
+ * Trait TPreDefinedIntOperations
+ * @package cls\types\number_operations
+ */
 trait TPreDefinedIntOperations
 {
     use TChr;

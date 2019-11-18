@@ -25,16 +25,8 @@ class ArrayType implements JsonSerializable, IteratorAggregate, ArrayAccess, Ser
   public const STD_PROP_LIST = 1;
   public const ARRAY_AS_PROPS = 2;
 
-  /**
-   * TODO
-   * Array mit optional fester Länge
-   */
-  public const FIXED = 4;
 
   /**
-   * TODO : FixedArray Klasse einplanen und testen
-   * https://www.php.net/manual/de/class.splfixedarray.php
-   *
    * @var ArrayObject
    */
   protected $arr_obj;
@@ -47,17 +39,7 @@ class ArrayType implements JsonSerializable, IteratorAggregate, ArrayAccess, Ser
    */
   public function __construct($input = [], $flags = 0, $iterator_class = 'ArrayIterator')
   {
-    switch ($flags) {
-      case 0 :
-      case 1 :
-      case 2 :
-        $this->arr_obj = new ArrayObject($input, $flags, $iterator_class);
-        break;
-      case 4 :
-      default : // TODO Überlegen, wie Parameter und Methoden gemischt werden und ob
-        $this->arr_obj = new ArrayObject($input, 0, $iterator_class);
-        break;
-    }
+    $this->arr_obj = new ArrayObject($input, $flags, $iterator_class);
   }
 
   /**
@@ -80,7 +62,7 @@ class ArrayType implements JsonSerializable, IteratorAggregate, ArrayAccess, Ser
   }
 
   /**
-   * @param $name
+   * @param string $name
    * @return bool
    */
   public function __isset($name)
@@ -89,24 +71,11 @@ class ArrayType implements JsonSerializable, IteratorAggregate, ArrayAccess, Ser
   }
 
   /**
-   * @param $name
+   * @param string $name
    */
   public function __unset($name)
   {
     unset($this->arr_obj->$name);
-  }
-
-
-  /**
-   * Specify data which should be serialized to JSON
-   * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
-   * @return mixed data which can be serialized by <b>json_encode</b>,
-   * which is a value of any type other than a resource.
-   * @since 5.4.0
-   */
-  public function jsonSerialize()
-  {
-    return $this->arr_obj;
   }
 
   /**
@@ -223,5 +192,18 @@ class ArrayType implements JsonSerializable, IteratorAggregate, ArrayAccess, Ser
   {
     $this->arr_obj->unserialize($serialized);
   }
+
+  /**
+   * Specify data which should be serialized to JSON
+   * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
+   * @return mixed data which can be serialized by <b>json_encode</b>,
+   * which is a value of any type other than a resource.
+   * @since 5.4.0
+   */
+  public function jsonSerialize()
+  {
+    return $this->arr_obj;
+  }
+
 
 }

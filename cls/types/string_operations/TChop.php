@@ -8,6 +8,10 @@
 
 namespace cls\types\string_operations;
 
+/**
+ * Trait TChop
+ * @package cls\types\string_operations
+ */
 trait TChop
 {
     /**

@@ -10,6 +10,10 @@ namespace cls\types\number_operations;
 
 use cls\types\StringType;
 
+/**
+ * Trait TChr
+ * @package cls\types\number_operations
+ */
 trait TChr
 {
 

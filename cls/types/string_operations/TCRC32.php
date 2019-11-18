@@ -5,7 +5,7 @@ namespace cls\types\string_operations;
 
 
 use cls\types\UInt32;
-use mysql_xdevapi\Exception;
+use Exception;
 
 /**
  * Trait TCRC32
@@ -16,6 +16,7 @@ trait TCRC32
 
   /**
    * @return UInt32
+   * @throws Exception
    */
   public function crc32() : UInt32
   {

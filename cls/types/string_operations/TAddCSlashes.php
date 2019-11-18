@@ -8,6 +8,10 @@
 
 namespace cls\types\string_operations;
 
+/**
+ * Trait TAddCSlashes
+ * @package cls\types\string_operations
+ */
 trait TAddCSlashes
 {
 

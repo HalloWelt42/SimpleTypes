@@ -8,6 +8,12 @@
 
 namespace cls\types\string_operations;
 
+use cls\types\array_operations\TImplode;
+
+/**
+ * Trait TPreDefinedStringOperations
+ * @package cls\types\string_operations
+ */
 trait TPreDefinedStringOperations
 {
 
@@ -30,6 +36,7 @@ trait TPreDefinedStringOperations
   use TCountChars;
   use TCRC32;
 //  crypt
+  use TEcho;
   use TExplode;
 //  fprintf
   use THtmlTranslationTable;
@@ -39,6 +46,8 @@ trait TPreDefinedStringOperations
   use THtmlEntityDecode;
   use THtmlSpecialCharsDecode;
   use THtmlSpecialChars;
+  use TLCFirst;
+//  levenshtein
 
 
 

@@ -9,6 +9,8 @@
 namespace cls;
 
 use cls\types\ArrayType;
+use cls\types\ChrType;
+use cls\types\std_lib\LocaleConv;
 use cls\types\StringType;
 use ReflectionClass;
 use ReflectionException;
@@ -25,15 +27,13 @@ class Main
    */
   public function __construct()
   {
-
-    $a = new ArrayType(
-        ['obj'=>9, 1, 2, 3],ArrayType::ARRAY_AS_PROPS
-    );
+    setlocale (LC_ALL, 'de_DE@euro','de_DE', 'de', 'ge');
 
     print_r(
-
-    $a
+        (new LocaleConv())->get()
     );
+
+
 
   }
 

@@ -3,7 +3,10 @@
 
 namespace cls\types;
 
-
+/**
+ * Class Byte
+ * @package cls\types
+ */
 class Byte extends IntType
 {
 
