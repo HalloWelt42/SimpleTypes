@@ -6,6 +6,8 @@ namespace cls\types\std_lib;
 
 use cls\types\ArrayType;
 use cls\types\ChrType;
+use cls\types\StringType;
+use cls\types\UInt8;
 
 class LocaleConv
 {
@@ -41,9 +43,22 @@ class LocaleConv
   {
     $arr_params = localeconv();
     $this->decimal_point = new ChrType($arr_params['decimal_point']);
-    $this->thousands_sep = $arr_params['thousands_sep'];
-    $this->int_curr_symbol = $arr_params['int_curr_symbol'];
-    $this->currency_symbol = $arr_params['currency_symbol'];
+    $this->thousands_sep = new ChrType($arr_params['thousands_sep']);
+    $this->int_curr_symbol = new StringType($arr_params['int_curr_symbol']);
+    $this->currency_symbol = new StringType($arr_params['currency_symbol']);
+    $this->mon_decimal_point = new ChrType($arr_params['mon_decimal_point']);
+    $this->mon_thousands_sep = new ChrType($arr_params['mon_thousands_sep']);
+    $this->mon_grouping = new ArrayType($arr_params['mon_grouping']);
+    $this->positive_sign = new ChrType($arr_params['positive_sign']);
+    $this->negative_sign = new ChrType($arr_params['negative_sign']);
+    $this->int_frac_digits = new UInt8($arr_params['int_frac_digits']);
+    $this->frac_digits = new UInt8($arr_params['frac_digits']);
+    $this->n_cs_precedes = (bool)$arr_params['n_cs_precedes'];
+    $this->p_sep_by_space = (bool)$arr_params['p_sep_by_space'];
+    $this->n_cs_precedes = (bool)$arr_params['n_cs_precedes'];
+    $this->n_sep_by_space = (bool)$arr_params['n_sep_by_space'];
+    $this->p_sign_posn = new UInt8($arr_params['p_sign_posn']);
+
     $this->arr_obj = new ArrayType($arr_params);
 
   }

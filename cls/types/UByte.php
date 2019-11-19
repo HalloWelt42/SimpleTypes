@@ -13,7 +13,7 @@ class UByte extends Number
 
   /**
    * @param int $value
-   * @return mixed|void
+   * @return void
    * @throws Exception
    */
   protected function restrictions( int $value ) : void
