@@ -9,6 +9,10 @@ use cls\types\ChrType;
 use cls\types\StringType;
 use cls\types\UInt8;
 
+/**
+ * Class LocaleConv
+ * @package cls\types\std_lib
+ */
 class LocaleConv
 {
 
