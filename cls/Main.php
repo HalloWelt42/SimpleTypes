@@ -27,12 +27,10 @@ class Main
    */
   public function __construct()
   {
-    setlocale (LC_ALL, 'de_DE@euro','de_DE', 'de', 'ge');
+//    setlocale (LC_ALL, 'de_DE@euro','de_DE', 'de', 'ge');
+    setlocale (LC_ALL, 'nl_NL.UTF-8@euro');
 
-    print_r(
-        (new LocaleConv())->get()
-    );
-
+        echo (new LocaleConv())->get()->count();
 
 
   }

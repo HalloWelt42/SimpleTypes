@@ -44,6 +44,11 @@ abstract class Number implements JsonSerializable
   protected $byte_length;
 
   /**
+   * @var int
+   */
+  protected $bit_length;
+
+  /**
    * Number constructor.
    * @param int $value
    */
