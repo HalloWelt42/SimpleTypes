@@ -30,7 +30,7 @@ class Main
 //    setlocale (LC_ALL, 'de_DE@euro','de_DE', 'de', 'ge');
     setlocale (LC_ALL, 'nl_NL.UTF-8@euro');
 
-        echo (new LocaleConv())->get()->count();
+        echo (new LocaleConv())->get();
 
 
   }
