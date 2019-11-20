@@ -8,7 +8,7 @@ use Exception;
  * Class UByte
  * @package cls\types
  */
-class UByte extends Number
+class UByte extends IntNumber
 {
 
   /**

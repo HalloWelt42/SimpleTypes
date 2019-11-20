@@ -12,7 +12,7 @@ use RuntimeException;
  * Class UDWord
  * @package cls\types
  */
-class UDWord extends Number
+class UDWord extends IntNumber
 {
 
   /**

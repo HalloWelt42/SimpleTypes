@@ -9,6 +9,7 @@
 namespace cls;
 
 
+use cls\types\FloatType;
 use cls\types\StringType;
 
 /**
@@ -25,11 +26,9 @@ class Main
   {
 
     print_r(
-        (new StringType('alter mann'))
-            #->md5()
-            ->metaphone()
-            ->nl()()
+        (new FloatType(123.56 ))()
     );
+
 
   }
 

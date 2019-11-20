@@ -15,7 +15,7 @@ use Exception;
  * Class IntType
  * @package cls\types
  */
-class IntType extends Number
+class IntType extends IntNumber
 {
 
   use TPreDefinedIntOperations;
