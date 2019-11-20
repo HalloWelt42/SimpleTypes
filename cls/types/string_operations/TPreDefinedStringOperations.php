@@ -30,24 +30,32 @@ trait TPreDefinedStringOperations
   use TBin2Hex;
   use TChop;
   use TChunkSplit;
-//  convert_cyr_string
-  use TUnix2UnixEncode;
-  use TUnix2UnixDecode;
+// convert_cyr_string
+// convert_uudecode
+// convert_uuencode
   use TCountChars;
   use TCRC32;
-//  crypt
+// crypt
   use TEcho;
   use TExplode;
-//  fprintf
+// fprintf
   use THtmlTranslationTable;
-//  hebrev
-//  hebrevc
+// hebrev
+// hebrevc
   use THex2Bin;
   use THtmlEntityDecode;
   use THtmlSpecialCharsDecode;
   use THtmlSpecialChars;
   use TLCFirst;
-//  levenshtein
+// levenshtein
+  use Tltrim;
+  use TMD5;
+  use TMetaphone;
+
+
+
+  use TUnix2UnixEncode;
+  use TUnix2UnixDecode;
 
 
 
