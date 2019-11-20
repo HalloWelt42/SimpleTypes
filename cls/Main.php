@@ -8,12 +8,8 @@
 
 namespace cls;
 
-use cls\types\ArrayType;
-use cls\types\ChrType;
-use cls\types\std_lib\LocaleConv;
+
 use cls\types\StringType;
-use ReflectionClass;
-use ReflectionException;
 
 /**
  * Class Main
@@ -28,7 +24,12 @@ class Main
   public function __construct()
   {
 
-
+    print_r(
+        (new StringType('alter mann'))
+            #->md5()
+            ->metaphone()
+            ->nl()()
+    );
 
   }
 

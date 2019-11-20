@@ -2,7 +2,6 @@
 
 
 namespace cls\types\string_operations;
-use ArrayObject;
 use cls\types\ArrayType;
 
 /**
