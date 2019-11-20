@@ -15,7 +15,7 @@ use RuntimeException;
  * Class Number
  * @package cls\types
  */
-abstract class Number implements JsonSerializable
+abstract class IntNumber implements JsonSerializable
 {
 
   /**
@@ -42,11 +42,6 @@ abstract class Number implements JsonSerializable
    * @var int
    */
   protected $byte_length;
-
-  /**
-   * @var int
-   */
-  protected $bit_length;
 
   /**
    * Number constructor.

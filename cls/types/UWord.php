@@ -4,7 +4,7 @@
 namespace cls\types;
 use Exception;
 
-class UWord extends Number
+class UWord extends IntNumber
 {
 
   /**
