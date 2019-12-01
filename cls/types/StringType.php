@@ -8,6 +8,8 @@
 
 namespace cls\types;
 
+use cls\types\format_converter\TStringToConverter;
+use cls\types\string_operations\TControlCharacter;
 use cls\types\string_operations\TPreDefinedStringOperations;
 use JsonSerializable;
 
@@ -18,12 +20,14 @@ use JsonSerializable;
 class StringType implements JsonSerializable
 {
   use TPreDefinedStringOperations;
+  use TControlCharacter;
+  use TStringToConverter;
 
 
   /**
    * @var string
    */
-  protected $str;
+  protected string $str;
 
   /**
    * StringType constructor.

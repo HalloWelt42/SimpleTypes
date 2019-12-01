@@ -9,7 +9,6 @@
 namespace cls;
 
 
-use cls\types\FloatType;
 use cls\types\StringType;
 
 /**
@@ -24,10 +23,13 @@ class Main
    */
   public function __construct()
   {
+     (new StringType('ö'))
+         ->String2Chr()
+         ->ord()
+         ->to_string_type()
+         ->echo()
+     ;
 
-    print_r(
-        (new FloatType(123.56 ))()
-    );
 
 
   }
