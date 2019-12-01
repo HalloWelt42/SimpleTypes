@@ -8,19 +8,12 @@
 
 namespace cls\types\string_operations;
 
-use cls\types\array_operations\TImplode;
-
 /**
  * Trait TPreDefinedStringOperations
  * @package cls\types\string_operations
  */
 trait TPreDefinedStringOperations
 {
-
-  /**
-   * eigene Methoden
-   */
-  use TControlCharacter;
 
   /**
    * PHP definierte und abgeleitete Methoden
@@ -51,11 +44,16 @@ trait TPreDefinedStringOperations
   use Tltrim;
   use TMD5;
   use TMetaphone;
-
+  use TNlToBr;
+  use TParseString;
+  use TPrint;
+// quoted_printable_decode
+// quoted_printable_encode
 
 
   use TUnix2UnixEncode;
   use TUnix2UnixDecode;
+
 
 
 

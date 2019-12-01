@@ -42,9 +42,10 @@ trait TAddCSlashes
      *
      * @return $this
      */
-    public function addcslashes( $charlist ) : self
+    public function addcslashes ( $charlist ) : self
     {
-        $this -> str = addcslashes ( $this -> str , $charlist );
+        $this -> str = addcslashes( $this -> str , $charlist );
+
         return $this;
     }
 

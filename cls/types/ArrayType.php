@@ -29,17 +29,18 @@ class ArrayType implements JsonSerializable, IteratorAggregate, ArrayAccess, Ser
   /**
    * @var ArrayObject
    */
-  protected $arr_obj;
+    protected ArrayObject $arr_obj;
 
-  /**
-   * ArrayType constructor.
-   * @param array $input
-   * @param int $flags
-   * @param string $iterator_class
-   */
-  public function __construct($input = [], $flags = 0, $iterator_class = 'ArrayIterator')
+    /**
+     * ArrayType constructor.
+     *
+     * @param array  $arr
+     * @param int    $flags
+     * @param string $iterator_class
+     */
+  public function __construct($arr = [], $flags = 0, $iterator_class = 'ArrayIterator')
   {
-    $this->arr_obj = new ArrayObject($input, $flags, $iterator_class);
+    $this->arr_obj = new ArrayObject($arr, $flags, $iterator_class);
   }
 
   /**
