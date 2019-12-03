@@ -50,6 +50,10 @@ trait TPreDefinedStringOperations
 // quoted_printable_decode
 // quoted_printable_encode
 
+  use TRtrim;
+  use TTrim;
+  use TSHA1;
+  use TStrIReplace;
 
   use TUnix2UnixEncode;
   use TUnix2UnixDecode;
