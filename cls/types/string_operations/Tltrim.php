@@ -11,11 +11,12 @@ trait Tltrim
 {
 
   /**
+   * @param string $charlist
    * @return $this
    */
-  public function ltrim(): self
+  public function ltrim($charlist = " \t\n\r\0\x0B"): self
   {
-    $this->str = ltrim($this->str);
+    $this->str = ltrim($this->str, $charlist);
     return $this;
   }
 

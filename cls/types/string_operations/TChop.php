@@ -44,14 +44,4 @@ trait TChop
     }
 
 
-    /**
-     * @param null|string $character_mask
-     *
-     * @return $this
-     */
-    public function rtrim( $character_mask = NULL ) : self
-    {
-        return $this -> chop ( $character_mask );
-    }
-
 }

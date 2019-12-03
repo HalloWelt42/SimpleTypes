@@ -23,15 +23,12 @@ class Main
    */
   public function __construct()
   {
-     (new StringType('ö'))
-         ->String2Chr()
-         ->ord()
-         ->to_string_type()
-         ->echo()
-     ;
+    (new StringType("Hallo Welt!"))
+        ->str_ireplace('hallo','HALLO',$i)
+        ->nl()
+        ->echo();
 
-
-
+    print_r($i);
   }
 
 
