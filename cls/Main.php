@@ -24,11 +24,10 @@ class Main
   public function __construct()
   {
     (new StringType("Hallo Welt!"))
-        ->str_ireplace('hallo','HALLO',$i)
+        ->str_pad(20,'_',)
         ->nl()
         ->echo();
 
-    print_r($i);
   }
 
 
