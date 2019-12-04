@@ -54,6 +54,7 @@ trait TPreDefinedStringOperations
   use TTrim;
   use TSHA1;
   use TStrIReplace;
+  use TStrPad;
 
   use TUnix2UnixEncode;
   use TUnix2UnixDecode;
